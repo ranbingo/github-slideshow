@@ -1,0 +1,82 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">逼真的宝可梦球</title>
+  <desc id="desc">带有高光、阴影和金属质感按钮的经典红白宝可梦球插画</desc>
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#eff4ff"/>
+      <stop offset="70%" stop-color="#cfd9ef"/>
+      <stop offset="100%" stop-color="#bac7e2"/>
+    </radialGradient>
+
+    <radialGradient id="ballShade" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.35"/>
+    </radialGradient>
+
+    <linearGradient id="topRed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff6c63"/>
+      <stop offset="40%" stop-color="#e64338"/>
+      <stop offset="100%" stop-color="#9d1711"/>
+    </linearGradient>
+
+    <linearGradient id="bottomWhite" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fcfcfd"/>
+      <stop offset="60%" stop-color="#e7ebf1"/>
+      <stop offset="100%" stop-color="#cfd5dd"/>
+    </linearGradient>
+
+    <linearGradient id="band" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#222"/>
+      <stop offset="50%" stop-color="#060606"/>
+      <stop offset="100%" stop-color="#2f2f2f"/>
+    </linearGradient>
+
+    <radialGradient id="buttonOuter" cx="35%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#fefefe"/>
+      <stop offset="45%" stop-color="#d3d8df"/>
+      <stop offset="100%" stop-color="#8a919a"/>
+    </radialGradient>
+
+    <radialGradient id="buttonInner" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#d9dee5"/>
+      <stop offset="100%" stop-color="#96a0aa"/>
+    </radialGradient>
+
+    <filter id="dropShadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="16" result="blur"/>
+      <feOffset in="blur" dx="0" dy="22" result="offset"/>
+      <feComponentTransfer in="offset">
+        <feFuncA type="linear" slope="0.35"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="ballClip">
+      <circle cx="512" cy="512" r="360"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1024" height="1024" fill="url(#bgGlow)"/>
+  <ellipse cx="512" cy="805" rx="290" ry="60" fill="#000" opacity="0.20"/>
+
+  <g filter="url(#dropShadow)">
+    <circle cx="512" cy="512" r="360" fill="#111"/>
+    <g clip-path="url(#ballClip)">
+      <rect x="152" y="152" width="720" height="360" fill="url(#topRed)"/>
+      <rect x="152" y="512" width="720" height="360" fill="url(#bottomWhite)"/>
+      <rect x="152" y="488" width="720" height="48" fill="url(#band)"/>
+      <ellipse cx="512" cy="550" rx="330" ry="250" fill="url(#ballShade)"/>
+      <ellipse cx="420" cy="300" rx="170" ry="90" fill="#fff" opacity="0.24"/>
+    </g>
+
+    <circle cx="512" cy="512" r="90" fill="#131313"/>
+    <circle cx="512" cy="512" r="74" fill="url(#buttonOuter)"/>
+    <circle cx="512" cy="512" r="46" fill="url(#buttonInner)"/>
+    <circle cx="494" cy="494" r="18" fill="#fff" opacity="0.60"/>
+  </g>
+</svg>
